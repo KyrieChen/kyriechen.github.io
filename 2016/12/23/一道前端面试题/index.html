@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="说在前面最近饿了么在招聘前端，看到 @sofish 的“心声”，并附上了一道面试题。作为jQuery重度使用者的我在做题过程中发现许多基础知识由于不经常使用已经忘得七七八八了。想想也是，大二看的红皮书现在又有多少还记得，于是也让我给自己定下目标，重新过一遍红皮书。
-正文1234567891011&amp;lt;ul id=&quot;list&quot; class=&quot;foo&quot;&amp;gt;  &amp;lt;li&amp;gt;#0&amp;lt;/l">
+<meta name="description" content="本文介绍：无意中看到的一道前端面试题，涉及到DOM操作。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一道前端面试题">
 <meta property="og:url" content="http://yoursite.com/2016/12/23/一道前端面试题/index.html">
 <meta property="og:site_name" content="Kyrie's Blog">
-<meta property="og:description" content="说在前面最近饿了么在招聘前端，看到 @sofish 的“心声”，并附上了一道面试题。作为jQuery重度使用者的我在做题过程中发现许多基础知识由于不经常使用已经忘得七七八八了。想想也是，大二看的红皮书现在又有多少还记得，于是也让我给自己定下目标，重新过一遍红皮书。
-正文1234567891011&amp;lt;ul id=&quot;list&quot; class=&quot;foo&quot;&amp;gt;  &amp;lt;li&amp;gt;#0&amp;lt;/l">
-<meta property="og:updated_time" content="2016-12-23T07:09:44.717Z">
+<meta property="og:description" content="本文介绍：无意中看到的一道前端面试题，涉及到DOM操作。">
+<meta property="og:updated_time" content="2016-12-23T07:27:22.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一道前端面试题">
-<meta name="twitter:description" content="说在前面最近饿了么在招聘前端，看到 @sofish 的“心声”，并附上了一道面试题。作为jQuery重度使用者的我在做题过程中发现许多基础知识由于不经常使用已经忘得七七八八了。想想也是，大二看的红皮书现在又有多少还记得，于是也让我给自己定下目标，重新过一遍红皮书。
-正文1234567891011&amp;lt;ul id=&quot;list&quot; class=&quot;foo&quot;&amp;gt;  &amp;lt;li&amp;gt;#0&amp;lt;/l">
+<meta name="twitter:description" content="本文介绍：无意中看到的一道前端面试题，涉及到DOM操作。">
 
 
 
@@ -104,7 +101,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
@@ -321,7 +318,9 @@
       
 
       
-        <h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>最近饿了么在招聘前端，看到 <a href="http://weibo.com/1639517374/EmXF0qlgQ?from=page_1005051639517374_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1482461124621" target="_blank" rel="external">@sofish</a> 的“心声”，并附上了一道面试题。作为jQuery重度使用者的我在做题过程中发现许多基础知识由于不经常使用已经忘得七七八八了。想想也是，大二看的红皮书现在又有多少还记得，于是也让我给自己定下目标，重新过一遍红皮书。</p>
+        <p>本文介绍：无意中看到的一道前端面试题，涉及到DOM操作。</p>
+<a id="more"></a>
+<h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>最近饿了么在招聘前端，看到 <a href="http://weibo.com/1639517374/EmXF0qlgQ?from=page_1005051639517374_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1482461124621" target="_blank" rel="external">@sofish</a> 的“心声”，并附上了一道面试题。作为jQuery重度使用者的我在做题过程中发现许多基础知识由于不经常使用已经忘得七七八八了。想想也是，大二看的红皮书现在又有多少还记得，于是也让我给自己定下目标，重新过一遍红皮书。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"list"</span> <span class="attr">class</span>=<span class="string">"foo"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>#0<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>#1<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>#2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>#3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">ul</span>&gt;</span><span class="tag">&lt;<span class="name">li</span>&gt;</span>#4<span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  ...</div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//v2ex.com"</span>&gt;</span>#99998<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>#99999<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>#100000<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
 <ul>
 <li>为<code>&lt;li&gt;</code>添加一个类 bar</li>
@@ -535,7 +534,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
